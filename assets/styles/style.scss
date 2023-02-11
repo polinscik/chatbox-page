@@ -1,0 +1,79 @@
+html {
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    background-color: burlywood;
+}
+
+.page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.form,
+.chat {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+}
+.subtitle {
+    margin: 1rem 0;
+}
+
+.commentForm {
+    display: flex;
+    flex-direction: column;
+}
+.title {
+    margin: 2rem 0 1.5rem;
+    padding: 0 1rem;
+}
+
+input {
+    margin-bottom: 1.5rem;
+}
+#submit {
+    margin-top: 1.5rem;
+    margin-bottom: unset;
+}
+
+label {
+    margin-bottom: 0.3rem;
+}
+.chatlog {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+    // .chatlog__userInfo
+
+    &__userInfo {
+        display: grid;
+        grid-template-columns: 1fr 50% 1fr;
+    }
+
+    // .chatlog__userImage
+
+    &__userImage {
+        max-width: 100%;
+        border-radius: 10px;
+    }
+
+    // .chatlog__userName
+
+    &__userName {
+        font-weight: bold;
+        font-size: 1.2em;
+        padding-left: 0.5em;
+    }
+
+    // .chatlog__time
+
+    &__time {
+        justify-self: end;
+    }
+
+    // .chatlog__message
+
+    &__message {
+        padding: 10px;
+        margin-top: 10px;
+        background-color: rgb(243, 212, 172);
+    }
+}

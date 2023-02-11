@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="/styles/normalize.css" />
+        <link rel="stylesheet" href="/styles/style.css" />
+    </head>
+    <body>
+        <h2 class="title">Сервис комментариев со спам фильтром</h2>
+        <div class="page">
+            <div class="form">
+                <h3 class="subtitle">Оставьте ваш комментарий</h3>
+                <div class="error" id="error"></div>
+                <form
+                    action="/string.js"
+                    method="post"
+                    class="commentForm"
+                    name="main"
+                >
+                    <div>
+                        <label for="anon">Сделать анонимный комментарий:</label>
+                        <input type="checkbox" name="anon" id="anon" />
+                    </div>
+
+                    <label for="name">Введите ваше имя:</label>
+                    <input type="text" name="name" id="name" />
+
+                    <label for="avatar"
+                        >Введите ссылку вашего аватара (необязательно):</label
+                    >
+                    <input type="url" name="avatar" id="avatar" value="" />
+
+                    <label for="textarea">Оставьте комментарий*:</label>
+                    <textarea
+                        name="textarea"
+                        id="textarea"
+                        cols="30"
+                        rows="10"
+                        value=""
+                    ></textarea>
+                    <input type="button" value="Отправить" id="submit" />
+                </form>
+            </div>
+            <div class="chat">
+                <h3 class="subtitle">Чат</h3>
+                <div class="chatbox" id="chatbox"></div>
+            </div>
+        </div>
+
+        <script src="/string.js"></script>
+    </body>
+</html>
+
+<!-- <div class="chatlog">
+    <div class="chatlog__userInfo">
+        <img class="chatlog__userImage" src="" alt="" />
+        <p class="chatlog__userName"></p>
+        <p class="chatlog__time"></p>
+    </div>
+    <div class="chatlog__message"></div>
+</div> -->
